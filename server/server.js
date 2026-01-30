@@ -8,7 +8,15 @@ import aiRouter from "./Routes/aiRoutes.js";
 
 const app=express();
 app.use(express.json())
-app.use(cors())
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://ai-resume-builder-wxow.onrender.com/",
+    ],
+    credentials: true,
+  })
+);
 
 const PORT=process.env.PORT || 3000;
 
