@@ -10,7 +10,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "http://localhost:3000",
+        target: "https://ai-resume-builder-backend-y79f.onrender.com",
         changeOrigin: true,
       },
     },
